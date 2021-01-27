@@ -20,6 +20,8 @@
     <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
   </div>
 
+  <%= form.file_field :image %>
+
   <div>
     <%= form.submit %>
   </div>
