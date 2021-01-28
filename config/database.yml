@@ -1,24 +1,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
+  host: <%= ENV.fetch("DB_HOST") { 'localhost' } %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV["DB_USERNAME"] %>
+  password: <%= ENV["DB_PASSWORD"] %>
+  port: 5432
 
 development:
   <<: *default
-  database: containerized_blog_development
-  username: cpcwood
-  password: password
-  port: 5432
+  database: <%= ENV.fetch("DB_NAME") { 'containerized_blog_development' } %>
 
 test:
   <<: *default
-  database: containerized_blog_test
-  username: cpcwood
-  password: password
+  database: <%= ENV.fetch("DB_NAME") { 'containerized_blog_test' } %>
 
 production:
   <<: *default
-  database: containerized_blog_production
-  username: cpcwood
-  password: password
+  database: <%= ENV.fetch("DB_NAME") { 'containerized_blog_production' } %>
