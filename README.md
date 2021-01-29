@@ -1,6 +1,6 @@
 # Containerized Blog
 
-Simple containerized Ruby on Rails blog application, as referenced in [One Way To: Containerize a Rails Application](https://cpcwood.com/blog).
+Simple containerized Ruby on Rails blog application, as referenced in [One Way To: Containerize a Rails Application](https://www.cpcwood.com/blog/1-one-way-to-containerize-a-ruby-on-rails-application).
 
 Generated using: ```rails new containerized_blog --skip-spring --skip-listen -d=postgresql```
 
